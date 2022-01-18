@@ -1,11 +1,11 @@
 {
-	"extension-id": "fullscreen-avoider",
-	"uuid": "fullscreen-avoider@noobsai.github.com", 
-	"name": "Fullscreen Avoider", 
+	"extension-id": "move-top-panel",
+	"uuid": "move-top-panel@lunarsc.github.com",
+	"name": "Move Top Panel",
  	"gettext-domain": "gnome-shell-extensions",
-	"settings-schema": "org.gnome.shell.extensions.fullscreen-avoider",
-	"description": "Moves the top panel to the secondary monitor if the primary is in fullscreen", 
-	"url": "https://github.com/Noobsai/fullscreen-avoider", 
-	"version": 5,
+	"settings-schema": "org.gnome.shell.extensions.move-top-panel",
+	"description": "Moves the top panel",
+	"url": "https://github.com/LunarSC/move-top-panel",
+	"version": 1,
 	"shell-version": ["40", "41"]
 }

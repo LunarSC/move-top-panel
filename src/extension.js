@@ -10,32 +10,17 @@ const ExtensionUtils = imports.misc.extensionUtils;
 let _settings = null;
 let _on_fullscreen;
 
-function get_unfullscreen_monitor() {
-	for (const monitor of LM.monitors) {
-		if (!monitor.inFullscreen) {
-			return monitor;
-		}
-	}
-}
-
 function fullscreen_changed() {
 	if (LM.monitors.length < 2) {
 		return;
 	}
 
 	let primary_monitor = LM.primaryMonitor;
-	let unfullscreen_monitor = get_unfullscreen_monitor();
-	if (!unfullscreen_monitor) {
-		return;
-	}
+	let unfullscreen_monitor = LM.monitors[1];
 
-	if (primary_monitor.inFullscreen) {
-		move_panel(unfullscreen_monitor);
-		move_hotcorners(unfullscreen_monitor);
-	} else {
-		move_panel(primary_monitor);
-		move_hotcorners(primary_monitor);
-	}
+	//move to 2nd monitor
+	move_panel(unfullscreen_monitor);
+	move_hotcorners(unfullscreen_monitor);
 }
 
 function move_panel(monitor) {
