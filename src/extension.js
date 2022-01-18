@@ -16,7 +16,7 @@ function fullscreen_changed() {
 	}
 
 	let primary_monitor = LM.primaryMonitor;
-	let unfullscreen_monitor = LM.monitors[1];
+	let unfullscreen_monitor = LM.monitors[0];
 
 	//move to 2nd monitor
 	move_panel(unfullscreen_monitor);
